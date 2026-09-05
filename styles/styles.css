@@ -1,3 +1,18 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+h1 {
+    color: #003366;
+}
+
 main {
     max-width: 840px;
 }
@@ -5,6 +20,9 @@ main {
 main img {
     width: 150px;
     height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 aside {
