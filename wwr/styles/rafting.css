@@ -125,3 +125,8 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+.socialmedia img {
+    width: 30px;
+    height: auto;
+}
