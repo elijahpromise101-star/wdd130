@@ -1,6 +1,5 @@
 :root {
     --primary-color: #055a05;
-
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
     --heading-font: "Georgia", serif;
@@ -94,11 +93,13 @@ article {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .hero article img {
     float: right;
     width: 125px;
+    height: auto;
     margin-left: 12px;
     border-radius: 4px;
 }
@@ -122,30 +123,6 @@ footer {
 }
 
 .socialmedia img {
-    width: 24px;
-    height: 24px;
-}
-
-.socialmedia img {
     width: 30px;
     height: auto;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 16px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    height: auto;
-    margin-left: 12px;
-    border-radius: 4px;
 }
