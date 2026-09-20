@@ -1,3 +1,10 @@
+/* Universal Selector Reset (Audit Fix) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Color Palette & Global Variables */
 :root {
     --primary-color: #05668d;
@@ -9,12 +16,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     color: var(--text-dark);
+    background-color: var(--accent-color);
 }
 
-/* 1. Header: CSS Grid Layout (Rubric Item 2) */
+/* 1. Header: CSS Grid Layout */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -28,8 +34,8 @@ header .logo {
     height: auto;
 }
 
-/* 2. Navigation: CSS Flexbox Layout (Rubric Item 3) */
-nav {
+/* 2. Navigation: CSS Flexbox Layout */
+header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -80,7 +86,16 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* 3. History Section (Rubric Item 4) */
+/* Float image inside hero article (Audit Fix) */
+.hero article img {
+    float: right;
+    width: 100px;
+    height: auto;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+/* 3. History Section */
 .history {
     padding: 2rem;
     max-width: 1100px;
@@ -100,7 +115,7 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* 4. Adventure Section: 5 Column Grid (Rubric Item 4 & Wireframe) */
+/* 4. Adventure Section */
 .adventure {
     padding: 2rem;
     max-width: 1200px;
@@ -131,7 +146,7 @@ nav a:hover {
     margin-top: 0.5rem;
 }
 
-/* 5. Footer: Right-Aligned Horizontal Social Icons (Rubric Item 5) */
+/* 5. Footer: Right-Aligned Social Media Links */
 footer {
     display: flex;
     justify-content: space-between;
@@ -141,12 +156,16 @@ footer {
     color: var(--text-light);
 }
 
-footer .socials {
+footer .socialmedia {
     display: flex;
     gap: 1rem;
 }
 
-footer .socials img {
+footer .socialmedia a {
+    text-decoration: none;
+}
+
+footer .socialmedia img {
     width: 30px;
     height: 30px;
 }
