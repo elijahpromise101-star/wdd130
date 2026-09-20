@@ -1,68 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Whitewater Rafting Co.</title>
     <meta name="description"
-      content="Learn about Whitewater Rafting Co., our company history, mission, and passion for wild river adventures.">
+      content="Learn about Whitewater Rafting Co., our company history, mission, and river adventures.">
     <meta name="author" content="Promise Elijah Elijah">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
+
+    <!-- Header Section with CSS Grid Layout -->
     <header>
-        <img src="images/logo.png" alt="Rafting Company Logo" width="120">
+        <img src="images/logo.png" alt="Rafting Company Logo" class="logo">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <div class="hero">
             <img src="images/hero.jpg" alt="Rafting down a rapid river">
             <h1>Whitewater Rafting Co.</h1>
             <article>
-                <img src="images/happy-client.jpg" alt="Happy raft guide smiling">
-                <p>Our mission is to provide exhilarating, safe, and unforgettable river rafting
-                    adventures for people of all experience levels while promoting wilderness
-                    conservation and community spirit.</p>
+                <h2>Our Mission</h2>
+                <p>Providing safe, exhilarating, and unforgettable white water rafting adventures
+                    for river enthusiasts of all experience levels.</p>
             </article>
         </div>
 
-        <section>
+        <!-- History Section -->
+        <section class="history">
             <h2>History</h2>
-            <p>Founded in 1998 by passionate outdoor enthusiasts, Whitewater Rafting Co. started
-                with just two rafts and a desire to share the beauty of wild rivers. Over the past
-                two decades, we have guided thousands of adventurers through scenic canyons and
-                world-class rapids.</p>
+            <div class="history-content">
+                <p>Founded in 1998, Whitewater Rafting Co. began with a single raft and a passion
+                    for western rivers. Over the past two decades, we have guided thousands of
+                    adventure seekers down class III-V rapids with an unmatched safety record.</p>
+                <img src="images/happy-clients.jpg" alt="Rafting group enjoying the river"
+                  class="history-img">
+                <p>Our experienced guides are certified in wilderness first aid and river rescue,
+                    ensuring every excursion is both thrilling and secure.</p>
+            </div>
         </section>
 
-        <section>
+        <!-- Adventure Section with 5 Figure Elements -->
+        <section class="adventure">
             <h2>Adventure Awaits You!</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/hero.jpg" alt="Los Dientes del Diablo Rapid">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/happy-clients.jpg" alt="Big Mallard Rapid">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/hero.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/happy-clients.jpg" alt="Salmon River Run">
+                    <figcaption>Salmon River Run</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/hero.jpg" alt="Shotgun Rapid">
+                    <figcaption>Shotgun Rapid</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
+    <!-- Footer Section with Right-Aligned Social Icons -->
     <footer>
-        <p>&copy; 2026 Whitewater Rafting Co. | Promise Elijah Elijah</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank" rel="noopener">
-                <img src="images/facebook.png" alt="Facebook Icon">
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">
-                <img src="images/linkedin.png" alt="LinkedIn Icon">
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener">
-                <img src="images/instagram.png" alt="Instagram Icon">
-            </a>
-        </nav>
+        <p>&copy; 2026 | Whitewater Rafting Co. | Promise Elijah Elijah</p>
+        <div class="socials">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png"
+                  alt="Facebook icon"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png"
+                  alt="Instagram icon"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png"
+                  alt="LinkedIn icon"></a>
+        </div>
     </footer>
+
 </body>
 
 </html>

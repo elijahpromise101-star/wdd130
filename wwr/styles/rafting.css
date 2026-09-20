@@ -1,128 +1,152 @@
+/* Color Palette & Global Variables */
 :root {
-    --primary-color: #055a05;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
-    --heading-font: "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary-color: #05668d;
+    --secondary-color: #028090;
+    --accent-color: #f0f3f4;
+    --text-dark: #111111;
+    --text-light: #ffffff;
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
 }
 
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
+/* 1. Header: CSS Grid Layout (Rubric Item 2) */
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     align-items: center;
-    justify-content: space-between;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
-    padding: 1rem;
 }
 
-header nav ul {
+header .logo {
+    width: 120px;
+    height: auto;
+}
+
+/* 2. Navigation: CSS Flexbox Layout (Rubric Item 3) */
+nav {
     display: flex;
-    list-style: none;
-    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
 }
 
-header nav a {
-    color: var(--accent2-color);
+nav a {
+    color: var(--text-light);
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+nav a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
 }
 
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* Hero Positioning */
+/* Hero Section Styling */
 .hero {
     position: relative;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.85;
-    background-color: var(--accent1-color);
-    color: #fff;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-light);
+    background-color: rgba(5, 102, 141, 0.85);
+    padding: 0.5rem 2rem;
+    margin: 0;
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 16px;
-    border-radius: 5px;
-    overflow: hidden;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    max-width: 400px;
+    border-radius: 6px;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
+/* 3. History Section (Rubric Item 4) */
+.history {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.history-img {
+    width: 100%;
     height: auto;
-    margin-left: 12px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
+/* 4. Adventure Section: 5 Column Grid (Rubric Item 4 & Wireframe) */
+.adventure {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.gallery figure {
+    margin: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.gallery figcaption {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* 5. Footer: Right-Aligned Horizontal Social Icons (Rubric Item 5) */
 footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
-    padding: 1rem;
+    color: var(--text-light);
 }
 
-.socialmedia {
+footer .socials {
     display: flex;
-    gap: 12px;
+    gap: 1rem;
 }
 
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
+footer .socials img {
     width: 30px;
-    height: auto;
+    height: 30px;
 }
