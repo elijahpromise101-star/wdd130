@@ -1,4 +1,4 @@
-/* Universal Selector Reset (Audit Fix) */
+/* Universal Selector Reset */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     background-color: var(--accent-color);
 }
 
-/* 1. Header: CSS Grid Layout */
+/* Header Styling */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -34,7 +34,7 @@ header .logo {
     height: auto;
 }
 
-/* 2. Navigation: CSS Flexbox Layout */
+/* Navigation Layout */
 header nav {
     display: flex;
     justify-content: space-around;
@@ -86,7 +86,7 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* Float image inside hero article (Audit Fix) */
+/* Float Image Inside Hero Article */
 .hero article img {
     float: right;
     width: 100px;
@@ -95,7 +95,7 @@ nav a:hover {
     border-radius: 4px;
 }
 
-/* 3. History Section */
+/* History Section */
 .history {
     padding: 2rem;
     max-width: 1100px;
@@ -115,7 +115,7 @@ nav a:hover {
     border-radius: 6px;
 }
 
-/* 4. Adventure Section */
+/* Adventure Section */
 .adventure {
     padding: 2rem;
     max-width: 1200px;
@@ -146,7 +146,7 @@ nav a:hover {
     margin-top: 0.5rem;
 }
 
-/* 5. Footer: Right-Aligned Social Media Links */
+/* Footer & Social Media Links */
 footer {
     display: flex;
     justify-content: space-between;
