@@ -27,18 +27,19 @@ header .logo {
     max-height: 60px;
 }
 
-nav a {
+header nav a {
     color: #ffffff;
     text-decoration: none;
     margin-left: 1.5rem;
     font-weight: bold;
 }
 
-nav a:hover,
-nav a.active {
+header nav a:hover,
+header nav a.active {
     color: #ffcc00;
 }
 
+/* Footer & Social Media Navigation */
 footer {
     display: flex;
     justify-content: space-between;
@@ -49,7 +50,21 @@ footer {
     margin-top: 3rem;
 }
 
-footer .socials img {
+footer p {
+    color: #ffffff;
+}
+
+footer nav.socialmedia {
+    display: flex;
+    align-items: center;
+}
+
+footer nav.socialmedia a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer nav.socialmedia img {
     width: 28px;
     height: 28px;
     margin-left: 0.5rem;
