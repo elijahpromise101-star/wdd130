@@ -20,3 +20,9 @@
     border: none;
     border-radius: 8px;
 }
+
+/* Social Media Icons Styling */
+.socialmedia img {
+    width: 35px;
+    height: auto;
+}
