@@ -5,9 +5,13 @@
     --text-dark: #2C3E50;
 }
 
-/* ==========================================
-   Header & Navigation (Strict Logo Sizing)
-   ========================================== */
+/* Base resets for all images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header & Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -35,9 +39,7 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* ==========================================
-   Main Page Layout
-   ========================================== */
+/* Main Layout */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -89,9 +91,7 @@ main {
     background-color: #D35400;
 }
 
-/* ==========================================
-   Contact Page Layout (Standard CSS Grid)
-   ========================================== */
+/* Contact Page Layout */
 .company-info {
     text-align: center;
     margin: 2rem 0;
@@ -119,7 +119,7 @@ main {
     border-radius: 8px;
 }
 
-/* Contact Form Styling */
+/* Form Styles */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -166,9 +166,7 @@ main {
     gap: 0.5rem;
 }
 
-/* ==========================================
-   Employee Section Grid
-   ========================================== */
+/* Employee Section */
 .employees {
     text-align: center;
     margin: 3rem 0;
@@ -265,9 +263,7 @@ main {
     background-color: var(--bg-light);
 }
 
-/* ==========================================
-   Footer & Social Icons (Strict Icon Sizing)
-   ========================================== */
+/* Footer & Strict Social Icon Constraints */
 footer {
     display: flex;
     justify-content: space-between;
