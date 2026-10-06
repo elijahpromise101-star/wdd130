@@ -9,7 +9,9 @@
     /* Charcoal Text */
 }
 
-/* Header & Navigation */
+/* ==========================================
+   Header & Navigation (Fixed Logo Sizing)
+   ========================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -18,13 +20,13 @@ header {
     background-color: var(--primary-color);
 }
 
-/* Header Logo Constraint */
+/* Strictly limits header logo dimensions */
 header img,
 header .logo {
-    width: 120px;
-    height: auto;
-    max-height: 100px;
-    object-fit: contain;
+    width: 120px !important;
+    height: auto !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
 }
 
 nav a {
@@ -38,7 +40,9 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* Main Container Layout */
+/* ==========================================
+   Main Container Layout (Wide Diagram)
+   ========================================== */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -90,7 +94,9 @@ main {
     background-color: #D35400;
 }
 
-/* Contact Page Layout */
+/* ==========================================
+   Contact Page Layout
+   ========================================== */
 .company-info {
     text-align: center;
     margin: 2rem 0;
@@ -165,7 +171,9 @@ main {
     gap: 0.5rem;
 }
 
-/* Employee Section */
+/* ==========================================
+   Employee Section Grid
+   ========================================== */
 .employees {
     text-align: center;
     margin: 3rem 0;
@@ -262,7 +270,9 @@ main {
     background-color: var(--bg-light);
 }
 
-/* Footer & Social Media Icon Constraints */
+/* ==========================================
+   Footer & Social Icons (Fixed Icon Sizing)
+   ========================================== */
 footer {
     display: flex;
     justify-content: space-between;
@@ -273,37 +283,22 @@ footer {
     margin-top: 3rem;
 }
 
-.sociallinks,
-.socialmedia {
+footer .socialmedia,
+footer .sociallinks {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.sociallinks img,
-.socialmedia img,
-footer nav a img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    display: inline-block;
-}
-
-/* Force Header Logo Size */
-header img {
-    width: 120px !important;
-    height: auto !important;
-    max-height: 80px !important;
-    object-fit: contain !important;
-}
-
-/* Force Footer Social Media Icons Size */
+/* Universal hard cap on social icon sizes */
 footer img,
 footer a img,
-.socialmedia img,
-.sociallinks img {
+footer .socialmedia img,
+footer .sociallinks img {
     width: 32px !important;
     height: 32px !important;
+    max-width: 32px !important;
     max-height: 32px !important;
     object-fit: contain !important;
+    display: inline-block !important;
 }
