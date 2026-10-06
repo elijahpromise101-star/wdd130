@@ -5,13 +5,25 @@
     --text-dark: #2C3E50;
 }
 
-/* Base resets for all images */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Header & Navigation */
+/* ==========================================
+   Header & Navigation
+   ========================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -39,84 +51,61 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* Main Layout */
+/* ==========================================
+   Main Content Layout (Centered Diagram Structure)
+   ========================================== */
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 2rem 1rem;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-}
-
-.hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    background-color: rgba(0, 51, 102, 0.75);
-    padding: 1rem 2rem;
-    border-radius: 6px;
-    margin: 0;
-}
-
-/* Buttons */
-.btn,
-.submit-btn {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.btn:hover,
-.submit-btn:hover {
-    background-color: #D35400;
-}
-
-/* Contact Page Layout */
 .company-info {
     text-align: center;
-    margin: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.company-info h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .info-details {
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
+.info-details p {
+    margin: 0;
+}
+
+/* Side-by-Side Map & Form Grid Centered in Main */
 .map-and-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: start;
+    justify-content: center;
+}
+
+.map-container {
     width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto 0;
+    height: 100%;
 }
 
 .map-container iframe {
     width: 100%;
     height: 100%;
-    min-height: 380px;
+    min-height: 440px;
     border: none;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Styles */
@@ -129,6 +118,14 @@ main {
     padding: 1.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 .form-item {
@@ -137,12 +134,17 @@ main {
     gap: 0.25rem;
 }
 
+.form-item label {
+    font-weight: bold;
+}
+
 .form-item input,
 .form-item textarea {
-    padding: 0.5rem;
+    padding: 0.6rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: inherit;
+    font-size: 0.95rem;
 }
 
 .purpose-fieldset {
@@ -152,6 +154,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.purpose-fieldset legend {
+    font-weight: bold;
+    padding: 0 0.25rem;
 }
 
 .radio-option {
@@ -166,104 +173,67 @@ main {
     gap: 0.5rem;
 }
 
-/* Employee Section */
+.submit-btn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #D35400;
+}
+
+/* ==========================================
+   Employee Section (Centered 3-Column Grid)
+   ========================================== */
 .employees {
     text-align: center;
-    margin: 3rem 0;
+    margin-top: 4rem;
+}
+
+.employees h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .employee-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
-    max-width: 1200px;
-    margin: 1.5rem auto 0;
 }
 
 .employee-grid figure {
     margin: 0;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .employee-grid img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
     border-radius: 4px;
 }
 
 .employee-grid figcaption {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-weight: bold;
     color: var(--text-dark);
 }
 
-/* Home Grid & Trips Containers */
-.home-grid,
-.trips-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.grid-card,
-.trip-card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.grid-card img,
-.trip-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.cta-banner,
-.page-title {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    padding: 2.5rem 1rem;
-    margin: 2rem 0;
-}
-
-/* Table Styling */
-.trips-table-section {
-    margin: 3rem 0;
-}
-
-.trips-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-.trips-table th,
-.trips-table td {
-    border: 1px solid #ddd;
-    padding: 0.75rem;
-    text-align: left;
-}
-
-.trips-table th {
-    background-color: var(--primary-color);
-    color: #ffffff;
-}
-
-.trips-table tr:nth-child(even) {
-    background-color: var(--bg-light);
-}
-
-/* Footer & Strict Social Icon Constraints */
+/* ==========================================
+   Footer & Strict Social Icon Limits
+   ========================================== */
 footer {
     display: flex;
     justify-content: space-between;
@@ -271,11 +241,10 @@ footer {
     padding: 1.5rem 2rem;
     background-color: var(--primary-color);
     color: #ffffff;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
-footer .socialmedia,
-footer .sociallinks {
+footer .socialmedia {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -283,8 +252,7 @@ footer .sociallinks {
 
 footer img,
 footer a img,
-footer .socialmedia img,
-footer .sociallinks img {
+footer .socialmedia img {
     width: 32px !important;
     height: 32px !important;
     max-width: 32px !important;
