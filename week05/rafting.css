@@ -288,3 +288,22 @@ footer nav a img {
     object-fit: contain;
     display: inline-block;
 }
+
+/* Force Header Logo Size */
+header img {
+    width: 120px !important;
+    height: auto !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+}
+
+/* Force Footer Social Media Icons Size */
+footer img,
+footer a img,
+.socialmedia img,
+.sociallinks img {
+    width: 32px !important;
+    height: 32px !important;
+    max-height: 32px !important;
+    object-fit: contain !important;
+}
