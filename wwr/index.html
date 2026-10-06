@@ -4,11 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | White Water Rafting</title>
+    <title>White Water Rafting | Home</title>
     <meta name="description"
-      content="Contact White Water Rafting to ask questions, view our location map, or learn more about our team.">
+      content="Welcome to White Water Rafting! Explore thrilling river trips, experienced guides, and unforgettable outdoor adventures.">
     <meta name="author" content="Janet Aggrey Egbo">
     <link rel="stylesheet" href="styles/rafting.css">
+
+    <!-- CSS Fix for Social Media Icons -->
+    <style>
+        footer nav.socialmedia {
+            display: flex !important;
+            gap: 15px !important;
+            align-items: center !important;
+        }
+
+        footer nav.socialmedia a img,
+        footer nav.socialmedia img,
+        .socialmedia img {
+            width: 32px !important;
+            height: 32px !important;
+            max-width: 32px !important;
+            max-height: 32px !important;
+            object-fit: contain !important;
+            display: inline-block !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,81 +43,64 @@
     </header>
 
     <main>
-        <!-- Company Heading & Info Centered -->
-        <section class="company-info">
-            <h1>White Water Rafting Company</h1>
-            <p>123 Main River Street</p>
-            <p>Kolob, California</p>
-            <p>+1 999 999 9999</p>
-            <p>info@whitewater.com</p>
+        <!-- Hero Section with Action Banner -->
+        <div class="hero">
+            <img src="images/experience.jpg"
+              alt="Rafting team navigating exciting whitewater rapids" class="hero-img">
+            <h1 class="hero-title">Experience the Ultimate River Adventure</h1>
+            <article class="hero-msg">
+                <h2>Your Journey Starts Here</h2>
+                <p>Join our expert guides for an incredible journey through pristine canyons and
+                    exhilarating rapids. Whether you are seeking family fun or adrenaline-pumping
+                    thrills, we have the perfect trip for you.</p>
+                <a href="trips.html" class="btn">Explore Trips</a>
+            </article>
+        </div>
 
-            <!-- Grid: Map (Left) & Form (Right) -->
-            <div class="map-and-form">
-                <div class="map-container">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11558.123456789!2d-116.2023!3d43.6150!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM2JzU0LjAiTiAxMTbDwrAxMic4LjMiVw!5e0!3m2!1sen!2sus!4v1234567890"
-                      loading="lazy" title="White Water Rafting Location">
-                    </iframe>
+        <!-- Newsletter Signup Form -->
+        <section class="newsletter">
+            <h2>Join Our Adventure Club</h2>
+            <p>Subscribe to our monthly newsletter for exclusive trip discounts, safety tips, and
+                river updates!</p>
+            <form action="#" method="post" class="newsletter-form">
+                <div class="form-row">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your first name"
+                      required>
                 </div>
-
-                <form action="#" method="post" class="contact-form">
-                    <div class="form-row">
-                        <label for="fullname">Name</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Placeholder"
-                          required>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Placeholder"
-                          required>
-                    </div>
-
-                    <div class="form-row radio-group">
-                        <label>Message Purpose</label>
-                        <div class="radio-options">
-                            <label><input type="radio" name="purpose" value="general" checked>
-                                General Inquiry</label>
-                            <label><input type="radio" name="purpose" value="reservation">
-                                Reservation Question</label>
-                            <label><input type="radio" name="purpose" value="website"> Website
-                                Suggestion</label>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Type here"
-                          required></textarea>
-                    </div>
-
-                    <div class="checkbox-row">
-                        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-                        <label for="subscribe">Please Subscribe me to the monthly newsletter</label>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Get in Touch!</button>
-                </form>
-            </div>
+                <div class="form-row">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email"
+                      required>
+                </div>
+                <button type="submit" class="submit-btn">Subscribe Now</button>
+            </form>
         </section>
 
-        <!-- Employee Boxed Section -->
-        <section class="employees">
-            <h2>We Are Here to Serve You</h2>
-            <div class="employee-grid">
-                <figure>
-                    <img src="images/employee1.jpg" alt="Employee Profile 1">
-                    <figcaption>Employee Profile</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee2.jpg" alt="Employee Profile 2">
-                    <figcaption>Employee Profile</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee3.jpg" alt="Employee Profile 3">
-                    <figcaption>Employee Profile</figcaption>
-                </figure>
-            </div>
+        <!-- Grid Display of Offerings & Call to Action -->
+        <section class="home-grid">
+            <section class="grid-card">
+                <img src="images/familyrun.jpg" alt="Family enjoying gentle rapids on the river">
+                <h2>Family Friendly Runs</h2>
+                <p>Safe, scenic, and fun for all ages. Enjoy gentle waves, stunning views, and
+                    riverside picnics perfect for creating family memories.</p>
+            </section>
+
+            <section class="grid-card">
+                <img src="images/extreme.jpg"
+                  alt="Expert rafters tackling high-volume canyon rapids">
+                <h2>Extreme Rapids</h2>
+                <p>For thrill-seekers looking for high-octane excitement! Test your skills on Class
+                    IV and V whitewater stretches with certified guides.</p>
+            </section>
+
+            <section class="grid-card cta-card">
+                <img src="images/ready.jpg" alt="Rafting guides getting ready for the river">
+                <h2>Ready to Hit the Water?</h2>
+                <p>Have questions or ready to reserve your spot? Our team is standing by to help you
+                    plan your next expedition.</p>
+                <a href="contact.html" class="btn">Contact Us Today</a>
+            </section>
         </section>
     </main>
 
