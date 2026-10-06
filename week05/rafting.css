@@ -1,7 +1,92 @@
+:root {
+    --primary-color: #003366;
+    /* Deep River Blue */
+    --accent-color: #E67E22;
+    /* Warm Outdoor Orange */
+    --bg-light: #F8F9FA;
+    /* Off-White */
+    --text-dark: #2C3E50;
+    /* Charcoal Text */
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+}
+
+header .logo {
+    max-height: 60px;
+    width: auto;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background-color: rgba(0, 51, 102, 0.75);
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    margin: 0;
+}
+
+/* Buttons */
+.btn,
+.submit-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover,
+.submit-btn:hover {
+    background-color: #D35400;
+}
+
 /* Contact Page Layout */
 .company-info {
     text-align: center;
     margin: 2rem 0;
+}
+
+.info-details {
+    margin-bottom: 2rem;
 }
 
 .map-and-form {
@@ -21,8 +106,171 @@
     border-radius: 8px;
 }
 
-/* Social Media Icons Styling */
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-item input,
+.form-item textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.purpose-fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Employee Section */
+.employees {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
+}
+
+.employee-grid figure {
+    margin: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+
+.employee-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.employee-grid figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+/* Home Grid & Trips Containers */
+.home-grid,
+.trips-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.grid-card,
+.trip-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.grid-card img,
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cta-banner,
+.page-title {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 2.5rem 1rem;
+    margin: 2rem 0;
+}
+
+/* Table Styling */
+.trips-table-section {
+    margin: 3rem 0;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.trips-table th,
+.trips-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.trips-table th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.trips-table tr:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+/* Footer & Social Media Icons */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    margin-top: 3rem;
+}
+
+.sociallinks,
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sociallinks img,
 .socialmedia img {
     width: 35px;
     height: auto;
+    object-fit: contain;
 }
