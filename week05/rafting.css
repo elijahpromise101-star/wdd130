@@ -1,16 +1,12 @@
 :root {
     --primary-color: #003366;
-    /* Deep River Blue */
     --accent-color: #E67E22;
-    /* Warm Outdoor Orange */
     --bg-light: #F8F9FA;
-    /* Off-White */
     --text-dark: #2C3E50;
-    /* Charcoal Text */
 }
 
 /* ==========================================
-   Header & Navigation (Fixed Logo Sizing)
+   Header & Navigation (Strict Logo Sizing)
    ========================================== */
 header {
     display: flex;
@@ -20,7 +16,6 @@ header {
     background-color: var(--primary-color);
 }
 
-/* Strictly limits header logo dimensions */
 header img,
 header .logo {
     width: 120px !important;
@@ -41,7 +36,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   Main Container Layout (Wide Diagram)
+   Main Page Layout
    ========================================== */
 main {
     max-width: 1200px;
@@ -95,7 +90,7 @@ main {
 }
 
 /* ==========================================
-   Contact Page Layout
+   Contact Page Layout (Standard CSS Grid)
    ========================================== */
 .company-info {
     text-align: center;
@@ -271,7 +266,7 @@ main {
 }
 
 /* ==========================================
-   Footer & Social Icons (Fixed Icon Sizing)
+   Footer & Social Icons (Strict Icon Sizing)
    ========================================== */
 footer {
     display: flex;
@@ -290,7 +285,6 @@ footer .sociallinks {
     align-items: center;
 }
 
-/* Universal hard cap on social icon sizes */
 footer img,
 footer a img,
 footer .socialmedia img,
