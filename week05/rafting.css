@@ -1,262 +1,277 @@
+/* Core Variables & Resets */
 :root {
-    --primary-color: #003366;
-    --accent-color: #E67E22;
-    --bg-light: #F8F9FA;
-    --text-dark: #2C3E50;
+    --primary-color: #005a9c;
+    --secondary-color: #e67e22;
+    --accent-color: #f4f4f4;
+    --text-color: #333333;
+    --heading-font: 'Arial', sans-serif;
+    --body-font: 'Roboto', sans-serif;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text-dark);
-    background-color: #ffffff;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ==========================================
-   Header & Navigation
-   ========================================== */
+/* Header & Navigation */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 15px 20px;
+    margin-bottom: 20px;
 }
 
-header img,
-header .logo {
-    width: 120px !important;
-    height: auto !important;
-    max-height: 80px !important;
-    object-fit: contain !important;
+header img.logo {
+    width: 120px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
 }
 
-nav a {
-    color: #ffffff;
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
     text-decoration: none;
-    margin-left: 1.5rem;
+    color: var(--primary-color);
     font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 4px;
 }
 
-nav a:hover {
-    color: var(--accent-color);
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
 }
 
-/* ==========================================
-   Main Content Layout (Centered Diagram Structure)
-   ========================================== */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
+/* Company Header Info */
 .company-info {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 40px;
 }
 
 .company-info h1 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .info-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 .info-details p {
-    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
-/* Side-by-Side Map & Form Grid Centered in Main */
+/* Side-by-Side Grid Layout for Map (Left) & Form (Right) */
 .map-and-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 30px;
     align-items: start;
-    justify-content: center;
-}
-
-.map-container {
-    width: 100%;
-    height: 100%;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
 }
 
 .map-container iframe {
     width: 100%;
-    height: 100%;
-    min-height: 440px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 /* Form Styles */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    text-align: left;
-    background-color: var(--bg-light);
-    padding: 1.5rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.contact-form h2 {
-    margin-top: 0;
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    text-align: center;
+    gap: 15px;
+    background: #ffffff;
 }
 
 .form-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 10px;
 }
 
 .form-item label {
     font-weight: bold;
 }
 
-.form-item input,
+.form-item input[type="text"],
+.form-item input[type="email"],
 .form-item textarea {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #777;
     border-radius: 4px;
-    font-family: inherit;
-    font-size: 0.95rem;
 }
 
 .purpose-fieldset {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    border: none;
+    padding: 0;
+    margin: 5px 0;
 }
 
 .purpose-fieldset legend {
     font-weight: bold;
-    padding: 0 0.25rem;
+    float: left;
+    width: 100px;
 }
 
 .radio-option {
+    margin-left: 100px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .checkbox-item {
-    flex-direction: row;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 10px;
+    grid-template-columns: none;
 }
 
 .submit-btn {
-    background-color: var(--accent-color);
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid #bbb;
+    padding: 10px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1rem;
-    width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
-    background-color: #D35400;
+    background-color: #d66e16;
 }
 
-/* ==========================================
-   Employee Section (Centered 3-Column Grid)
-   ========================================== */
+/* Employee Section */
 .employees {
     text-align: center;
-    margin-top: 4rem;
+    background-color: var(--accent-color);
+    padding: 30px 20px;
+    margin: 40px 0;
 }
 
 .employees h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .employee-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .employee-grid figure {
-    margin: 0;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 0.75rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
 }
 
 .employee-grid img {
     width: 100%;
-    height: 200px;
+    max-width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .employee-grid figcaption {
-    margin-top: 0.75rem;
     font-weight: bold;
-    color: var(--text-dark);
 }
 
-/* ==========================================
-   Footer & Strict Social Icon Limits
-   ========================================== */
+/* Footer Styling */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    margin-top: 4rem;
+    background-color: var(--accent-color);
+    padding: 20px;
+    margin-top: 20px;
 }
 
-footer .socialmedia {
+footer nav.socialmedia {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
     align-items: center;
 }
 
-footer img,
-footer a img,
-footer .socialmedia img {
-    width: 32px !important;
-    height: 32px !important;
-    max-width: 32px !important;
-    max-height: 32px !important;
-    object-fit: contain !important;
-    display: inline-block !important;
+footer nav.socialmedia a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Requested Table Styling */
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin: 20px auto;
+}
+
+th,
+td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    text-align: center;
+}
+
+thead th,
+tfoot tr {
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .map-and-form {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-item {
+        grid-template-columns: 1fr;
+    }
+
+    .purpose-fieldset legend {
+        float: none;
+        width: auto;
+    }
+
+    .radio-option {
+        margin-left: 0;
+    }
 }

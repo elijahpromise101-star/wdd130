@@ -7,14 +7,236 @@
     <title>Contact Us | White Water Rafting</title>
     <meta name="description"
       content="Contact White Water Rafting to ask questions, view our location map, or learn more about our team.">
-    <meta name="author" content="Elijah Promise">
+    <meta name="author" content="Elijah Promise Elijah">
     <link rel="stylesheet" href="styles/rafting.css">
+
+    <style>
+        /* Centered Page Container Matching Wireframe */
+        body {
+            max-width: 850px !important;
+            margin: 0 auto !important;
+            padding: 20px !important;
+            font-family: Arial, sans-serif !important;
+            color: #333 !important;
+            background-color: #fff !important;
+        }
+
+        /* Purple Header matching wireframe top bar */
+        header {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            background-color: #d1c4e9 !important;
+            padding: 15px 25px !important;
+            border: 1px solid #999 !important;
+            margin-bottom: 25px !important;
+        }
+
+        header img.logo {
+            width: 100px !important;
+            height: 80px !important;
+            object-fit: contain !important;
+            background-color: #e0e0e0 !important;
+            border: 1px solid #bbb !important;
+        }
+
+        header nav {
+            display: flex !important;
+            gap: 2px !important;
+        }
+
+        header nav a {
+            text-decoration: none !important;
+            color: #000 !important;
+            background-color: #ffffff !important;
+            border: 1px solid #777 !important;
+            padding: 8px 18px !important;
+            font-weight: normal !important;
+            font-size: 0.9rem !important;
+        }
+
+        /* Centered Company Info Header */
+        .company-info {
+            text-align: center !important;
+            margin-bottom: 30px !important;
+        }
+
+        .company-info h1 {
+            font-size: 1.8rem !important;
+            margin-bottom: 8px !important;
+            font-weight: bold !important;
+        }
+
+        .info-details p {
+            margin: 2px 0 !important;
+            font-size: 0.95rem !important;
+            color: #222 !important;
+        }
+
+        /* Two-Column Grid: Map (Left) & Form (Right) */
+        .map-and-form {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 25px !important;
+            align-items: start !important;
+            text-align: left !important;
+            margin-top: 20px !important;
+            margin-bottom: 30px !important;
+        }
+
+        .map-container iframe {
+            width: 100% !important;
+            height: 350px !important;
+            border: 1px solid #999 !important;
+            background-color: #e0e0e0 !important;
+        }
+
+        /* Form Layout */
+        .contact-form {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+            font-size: 0.9rem !important;
+        }
+
+        .form-item {
+            display: grid !important;
+            grid-template-columns: 80px 1fr !important;
+            align-items: center !important;
+            gap: 10px !important;
+        }
+
+        .form-item label {
+            font-weight: bold !important;
+        }
+
+        .form-item input[type="text"],
+        .form-item input[type="email"],
+        .form-item textarea {
+            width: 100% !important;
+            padding: 6px 8px !important;
+            border: 1px solid #777 !important;
+            border-radius: 3px !important;
+            box-sizing: border-box !important;
+        }
+
+        .purpose-fieldset {
+            border: none !important;
+            padding: 0 !important;
+            margin: 5px 0 !important;
+        }
+
+        .purpose-fieldset legend {
+            font-weight: bold !important;
+            float: left !important;
+            width: 80px !important;
+            padding-right: 10px !important;
+        }
+
+        .radio-option {
+            margin-left: 90px !important;
+            margin-bottom: 4px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+
+        .checkbox-item {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            grid-template-columns: none !important;
+        }
+
+        .submit-btn {
+            background-color: #e0e0e0 !important;
+            color: #000 !important;
+            border: 1px solid #777 !important;
+            padding: 8px !important;
+            font-size: 0.9rem !important;
+            cursor: pointer !important;
+            margin-top: 5px !important;
+            width: 100% !important;
+        }
+
+        .submit-btn:hover {
+            background-color: #cccccc !important;
+        }
+
+        /* Employee Section Box */
+        .employees {
+            text-align: center !important;
+            background-color: #f2f2f2 !important;
+            border: 1px solid #999 !important;
+            padding: 20px 15px !important;
+            margin-bottom: 25px !important;
+        }
+
+        .employees h2 {
+            font-size: 1.4rem !important;
+            margin-bottom: 20px !important;
+        }
+
+        .employee-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 20px !important;
+        }
+
+        .employee-grid figure {
+            margin: 0 !important;
+        }
+
+        .employee-grid img {
+            width: 80px !important;
+            height: 80px !important;
+            object-fit: cover !important;
+            background-color: #ccc !important;
+            border: 1px solid #888 !important;
+            margin: 0 auto 8px auto !important;
+            display: block !important;
+        }
+
+        .employee-grid figcaption {
+            font-size: 0.85rem !important;
+            color: #333 !important;
+        }
+
+        /* Purple Footer matching wireframe bottom bar */
+        footer {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            background-color: #d1c4e9 !important;
+            padding: 15px 20px !important;
+            border: 1px solid #999 !important;
+        }
+
+        footer p {
+            font-size: 0.9rem !important;
+            color: #000 !important;
+            margin: 0 !important;
+        }
+
+        footer nav.socialmedia {
+            display: flex !important;
+            gap: 10px !important;
+            align-items: center !important;
+        }
+
+        footer nav.socialmedia a img {
+            width: 32px !important;
+            height: 32px !important;
+            object-fit: contain !important;
+            border: 1px solid #777 !important;
+            background-color: #fff !important;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="White Water Rafting Logo" class="logo"
-          style="width: 120px; height: auto; max-height: 80px; object-fit: contain;">
+        <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -28,12 +250,13 @@
         <section class="company-info">
             <h1>White Water Rafting Company</h1>
             <div class="info-details">
-                <p><strong>Address:</strong> 123 Main River Street, Kolob, California</p>
-                <p><strong>Phone:</strong> +1 999 999 9999</p>
-                <p><strong>Email:</strong> info@whitewater.com</p>
+                <p>123 Main River Street</p>
+                <p>Kolob, California</p>
+                <p>+1 999 999 9999</p>
+                <p>info@whitewater.com</p>
             </div>
 
-            <!-- Centered Map (Left) & Form (Right) Grid -->
+            <!-- Wireframe Grid: Map Left & Form Right -->
             <div class="map-and-form">
                 <div class="map-container">
                     <iframe
@@ -43,17 +266,15 @@
                 </div>
 
                 <form action="#" method="post" class="contact-form">
-                    <h2>Send Us a Message</h2>
-
                     <div class="form-item">
                         <label for="fullname">Name</label>
-                        <input type="text" id="fullname" name="fullname"
-                          placeholder="Your Full Name" required>
+                        <input type="text" id="fullname" name="fullname" placeholder="Placeholder"
+                          required>
                     </div>
 
                     <div class="form-item">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address"
+                        <input type="email" id="email" name="email" placeholder="Placeholder"
                           required>
                     </div>
 
@@ -75,13 +296,13 @@
 
                     <div class="form-item">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4"
-                          placeholder="Type your message here..." required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Type here"
+                          required></textarea>
                     </div>
 
                     <div class="form-item checkbox-item">
                         <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-                        <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                        <label for="subscribe">Please Subscribe me to the monthly newsletter</label>
                     </div>
 
                     <button type="submit" class="submit-btn">Get in Touch!</button>
@@ -89,35 +310,33 @@
             </div>
         </section>
 
-        <!-- Centered Employee Section -->
+        <!-- Centered Employee Section Box -->
         <section class="employees">
             <h2>We Are Here to Serve You</h2>
             <div class="employee-grid">
                 <figure>
-                    <img src="images/employee1.jpg" alt="John Doe, Head River Guide">
-                    <figcaption>John Doe - Head River Guide</figcaption>
+                    <img src="images/employee1.jpg" alt="John Parker  1">
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee2.jpg" alt="Jane Smith, Safety Director">
-                    <figcaption>Jane Smith - Safety Director</figcaption>
+                    <img src="images/employee2.jpg" alt="Employee Profile 2">
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee3.jpg" alt="Alex Johnson, Operations Manager">
-                    <figcaption>Alex Johnson - Operations Manager</figcaption>
+                    <img src="images/employee3.jpg" alt="Employee Profile 3">
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 White Water Rafting | Promise Elijah</p>
+        <p>&copy; 2026 White Water Rafting | Elijah Promise Elijah</p>
         <nav class="socialmedia">
-            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook Icon"
-                  style="width:32px; height:32px; object-fit:contain;"></a>
-            <a href="https://twitter.com"><img src="images/twitter.jpg" alt="Twitter Icon"
-                  style="width:32px; height:32px; object-fit:contain;"></a>
-            <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram Icon"
-                  style="width:32px; height:32px; object-fit:contain;"></a>
+            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook Icon"></a>
+            <a href="https://twitter.com"><img src="images/twitter.jpg" alt="Twitter Icon"></a>
+            <a href="https://instagram.com"><img src="images/instagram.png"
+                  alt="Instagram Icon"></a>
         </nav>
     </footer>
 </body>
