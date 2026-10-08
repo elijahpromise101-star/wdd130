@@ -33,11 +33,16 @@ header {
     margin-bottom: 20px;
 }
 
-header img.logo {
-    width: 120px;
-    height: auto;
-    max-height: 80px;
-    object-fit: contain;
+/* Header Logo Size Constraint */
+header img.logo,
+header .logo,
+header img {
+    width: 120px !important;
+    max-width: 120px !important;
+    height: auto !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+    display: block !important;
 }
 
 header nav {
@@ -206,7 +211,7 @@ header nav a:hover {
     font-weight: bold;
 }
 
-/* Footer Styling */
+/* Footer & Social Media Icon Size Constraints */
 footer {
     display: flex;
     justify-content: space-between;
@@ -222,13 +227,19 @@ footer nav.socialmedia {
     align-items: center;
 }
 
-footer nav.socialmedia a img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
+footer nav.socialmedia a img,
+footer nav.socialmedia img,
+footer img,
+.socialmedia img {
+    width: 32px !important;
+    max-width: 32px !important;
+    height: 32px !important;
+    max-height: 32px !important;
+    object-fit: contain !important;
+    display: inline-block !important;
 }
 
-/* Requested Table Styling */
+/* Table Styling for trips.html */
 table {
     border-collapse: collapse;
     border: 2px solid rgb(140 140 140);
@@ -252,7 +263,7 @@ tfoot tr {
     font-weight: 700;
 }
 
-/* Responsive Layout for Smaller Screens */
+/* Responsive Layout for Mobile Screens */
 @media screen and (max-width: 768px) {
     .map-and-form {
         grid-template-columns: 1fr;
