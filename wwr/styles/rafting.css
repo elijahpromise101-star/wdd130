@@ -156,3 +156,16 @@ footer nav.sociallinks img,
     gap: 1rem;
     align-items: center;
 }
+
+/* Footer Social Media Links & Icons */
+footer nav.socialmedia {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+footer nav.socialmedia img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
